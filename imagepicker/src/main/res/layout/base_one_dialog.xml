@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/customer_dialog_bg"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    
+
+    <TextView
+        android:id="@+id/tv_one_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="温馨提示"
+        android:textColor="@color/font_h1"
+        android:textSize="14sp" />
+
+   
+
+    <TextView
+        android:id="@+id/one_btn_ok"
+        android:layout_width="150dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:background="@drawable/dialog_bg"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/theme_color"
+        android:textSize="14sp" />
+
+</LinearLayout>
