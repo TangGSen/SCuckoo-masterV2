@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="home_item_divider">1dp</dimen>
+    <dimen name="dp5">5dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="header_text_size">26sp</dimen>
+    <dimen name="header_margin">5dp</dimen>
+    <dimen name="iv_cover_height">140dp</dimen>
+
+    <dimen name="lv_row_padding">5dp</dimen>
+    <dimen name="lv_row_text_size">20sp</dimen>
+    <dimen name="lv_row_icon_width">50dp</dimen>
+    <dimen name="lv_row_icon_padding">5dp</dimen>
+
+
+
+    <dimen name="frgment_login_24dp">24dp</dimen>
+    <dimen name="frgment_login_edtx_h40dp">40dp</dimen>
+    <dimen name="frgment_login_8dp">8dp</dimen>
+    <dimen name="frgment_login_16dp">16dp</dimen>
+    <dimen name="frgment_login_2dp">2dp</dimen>
+    <dimen name="fragment_font_14sp">14sp</dimen>
+    <dimen name="fragment_font_16sp">16sp</dimen>
+    <dimen name="frgment_login_layout_margin">24dp</dimen>
+
+    <dimen name="common_8dp">8dp</dimen>
+    <dimen name="common_4dp">4dp</dimen>
+    <dimen name="common_16dp">16dp</dimen>
+    <dimen name="font_12sp">12sp</dimen>
+    <dimen name="font_14sp">14sp</dimen>
+    <dimen name="userinfo_bg_height">200dp</dimen>
+
+    <dimen name="image_thumbnail_size">100dp</dimen>
+    <dimen name="image_thumbnail_spacing">1dp</dimen>
+    <dimen name="default_keyboard_height">276dp</dimen>
+
+    <dimen name="line_divider">0.6dp</dimen>
+
+</resources>

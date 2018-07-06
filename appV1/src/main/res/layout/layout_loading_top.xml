@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        style="@android:style/Widget.ProgressBar.Small.Inverse"
+        android:layout_width="20dp"
+        android:layout_marginTop="@dimen/common_8dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="20dp"
+        android:layout_marginBottom="10dp"
+        android:indeterminateDuration="1500"
+        android:indeterminateDrawable="@drawable/ic_progressbar_rotate"/>
+
+</LinearLayout>

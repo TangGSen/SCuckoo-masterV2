@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/common_8dp"
+        android:background="@color/not_white_v2"
+        app:layout_constraintBottom_toTopOf="@+id/btReset"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/navContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@color/not_white_v2">
+
+            <View
+                android:id="@+id/viewOfTitle"
+                android:layout_width="6dp"
+                android:layout_height="16dp"
+                android:layout_marginBottom="@dimen/common_8dp"
+                android:layout_marginLeft="@dimen/common_8dp"
+                android:layout_marginTop="11dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cuckooService"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="@dimen/common_8dp"
+                android:gravity="center_vertical"
+                android:text="@string/str_cuckoo_service"
+                android:textColor="@color/colorFrist"
+                android:textSize="@dimen/fragment_font_16sp"
+                app:layout_constraintLeft_toRightOf="@+id/viewOfTitle"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_8dp"
+                android:layout_marginTop="@dimen/common_8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cuckooService" />
+
+            <View
+                android:id="@+id/viewOfTitle2"
+                android:layout_width="6dp"
+                android:layout_height="16dp"
+                android:layout_marginBottom="@dimen/common_8dp"
+                android:layout_marginLeft="@dimen/common_8dp"
+                android:layout_marginTop="19dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+            <TextView
+                android:id="@+id/allClass"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="@dimen/common_8dp"
+                android:layout_marginTop="@dimen/common_8dp"
+                android:gravity="center_vertical"
+                android:text="@string/str_all_class"
+                android:textColor="@color/colorFrist"
+                android:textSize="@dimen/fragment_font_16sp"
+                app:layout_constraintLeft_toRightOf="@+id/viewOfTitle2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+            <RadioGroup
+                android:id="@+id/classGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_8dp"
+                android:layout_marginTop="@dimen/common_8dp"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/allClass">
+
+
+            </RadioGroup>
+
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/btReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="@dimen/common_4dp"
+        android:background="@drawable/bg_style_gray_v2"
+        android:paddingBottom="10dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="10dp"
+        android:text="@string/str_reset"
+        android:textColor="@color/whiles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/btFinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/bg_style_theme_2dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="10dp"
+        android:text="@string/str_finish"
+        android:textColor="@color/whiles"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btReset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_marginTop="@dimen/frgment_login_layout_margin"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_chose_user_type"
+        android:layout_marginTop="@dimen/common_8dp"
+        android:layout_marginLeft="@dimen/common_16dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="@dimen/common_16dp"
+        android:textSize="18sp" />
+
+    <com.ourcompany.widget.StateFrameLayout
+        android:id="@+id/layoutState"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:loadingLayoutResId="@layout/layout_loading_cencter">
+
+        <include layout="@layout/layout_with_not_refresh_recycleview" />
+    </com.ourcompany.widget.StateFrameLayout>
+
+    <Button
+        android:layout_marginLeft="@dimen/common_16dp"
+        android:layout_marginRight="@dimen/common_16dp"
+        android:id="@+id/btFinish"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/frgment_login_edtx_h40dp"
+        android:layout_marginTop="@dimen/frgment_login_24dp"
+        android:background="@drawable/etbg_login_register"
+        android:enabled="false"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginBottom="?actionBarSize"
+        android:text="@string/str_finish"
+        android:textColor="@drawable/selector_text_style_v2"
+        android:textSize="16sp"/>
+
+</LinearLayout>

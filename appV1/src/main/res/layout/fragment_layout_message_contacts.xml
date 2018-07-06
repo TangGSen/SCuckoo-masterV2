@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/btnSerach"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/common_16dp"
+            android:layout_marginRight="@dimen/common_16dp"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:background="@drawable/bg_style_gray"
+            android:drawableLeft="@drawable/ic_small_search"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical|left"
+            android:text="搜索"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/font_12sp" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>

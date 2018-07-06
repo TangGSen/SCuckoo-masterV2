@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingTop="@dimen/common_16dp"
+    android:paddingLeft="@dimen/frgment_login_24dp"
+    android:paddingRight="32dp"
+    android:orientation="vertical">
+
+
+    <ProgressBar
+
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_marginBottom="@dimen/common_16dp"
+        android:max="100"
+        android:maxHeight="2dp"
+        android:minHeight="2dp"
+        android:progress="0"
+        android:progressDrawable="@drawable/drawable_progress_horizontal" />
+
+    <TextView
+        android:id="@+id/tvStates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar"
+        android:textSize="@dimen/font_14sp"
+        android:textColor="@color/colorFrist"
+        android:text="下载中" />
+
+    <TextView
+        android:id="@+id/tvProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/progressBar"
+        android:textColor="@color/colorFrist"
+        android:textSize="@dimen/font_14sp"
+        android:text="0/100" />
+
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/whiles"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_safety_code"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/frgment_login_edtx_h40dp"
+        android:layout_marginLeft="@dimen/frgment_login_24dp"
+        android:layout_marginRight="@dimen/frgment_login_24dp"
+        android:layout_marginBottom="@dimen/common_8dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_verify_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/et_user_name"
+            android:layout_marginBottom="@dimen/common_8dp"
+            android:layout_marginRight="@dimen/common_8dp"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableLeft="@drawable/ic_safety"
+            android:drawablePadding="@dimen/common_4dp"
+            android:hint="@string/frag_login_safety_hint"
+            android:lines="1"
+            android:textColor="@color/colorFrist"
+            android:textColorHint="@color/text_gray"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bt_safety_code"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layout_ets"
+            android:layout_marginLeft="@dimen/common_8dp"
+            android:background="@null"
+            android:enabled="true"
+            android:gravity="center_vertical|right"
+            android:text="@string/get_safety_code"
+            android:textAllCaps="false"
+            android:textColor="@drawable/selector_text_style_v1"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_marginLeft="@dimen/frgment_login_24dp"
+        android:layout_marginRight="@dimen/frgment_login_24dp"
+        android:id="@+id/btFinish"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/frgment_login_edtx_h40dp"
+        android:layout_marginTop="@dimen/frgment_login_24dp"
+        android:background="@drawable/etbg_login_register"
+        android:enabled="false"
+        android:text="@string/str_finish"
+        android:textColor="@drawable/selector_text_style_v2"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

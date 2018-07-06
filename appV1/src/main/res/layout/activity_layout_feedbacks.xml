@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/whiles"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/whiles"
+        android:padding="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIcon="@drawable/ic_back_v3"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/colorFrist">
+
+        <TextView
+            android:id="@+id/btPublish"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/common_16dp"
+            android:paddingLeft="@dimen/common_16dp"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="center"
+            android:text="@string/btPublish"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fragment_font_16sp" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <EditText
+        android:id="@+id/etContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="@dimen/common_16dp"
+
+        android:layout_weight="1"
+        android:background="@color/colorBg"
+        android:gravity="top"
+        android:hint="@string/hint_write_feeback"
+        android:textColor="@color/colorFrist"
+        android:textColorHint="@color/colorSecond"
+        android:textSize="@dimen/font_14sp" />
+
+
+</LinearLayout>

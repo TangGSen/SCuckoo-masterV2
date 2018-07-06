@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ourcompany.widget.CouponConstraintLayoutViewV2 xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBg"
+    android:layout_marginLeft="@dimen/common_8dp"
+    android:layout_marginRight="@dimen/common_8dp"
+    android:layout_marginTop="@dimen/common_16dp"
+    app:round_radius="0dp"
+    app:typeRecfWidth="4dp"
+    app:cicleRadiusWidth="3dp"
+    app:bgColor="@color/whiles"
+    app:cicleColor ="@color/colorBg"
+    app:typeClassColor="@color/gradient_end_red_v2">
+
+    <TextView
+        android:id="@+id/tvCouponMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:minEms="6"
+        android:maxEms="6"
+        android:text="￥888"
+        android:layout_marginLeft="@dimen/common_4dp"
+        android:gravity="center"
+        android:textColor="@color/whiles"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:background="@color/gradient_end_red_v2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_8dp"
+        android:layout_marginRight="@dimen/common_8dp"
+        android:gravity="left"
+        android:text="开业十周年庆优惠1000元"
+        android:textColor="@color/colorFrist"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTime"
+        app:layout_constraintLeft_toRightOf="@+id/tvCouponMoney"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/common_8dp"
+        android:layout_marginTop="@dimen/common_8dp"
+        android:gravity="left"
+        android:text="2018-05-01~2018-06-02"
+        android:textColor="@color/colorSecond"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/tvName"
+        app:layout_constraintRight_toLeftOf="@+id/tvStates"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+
+    <ImageView
+        android:id="@+id/imageChoose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/common_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/tvStates"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/common_16dp"
+        android:ems="1"
+        android:gravity="center"
+        android:paddingBottom="@dimen/common_8dp"
+        android:paddingTop="@dimen/common_8dp"
+        android:visibility="invisible"
+        android:text="点击选择"
+        android:textColor="@color/whiles"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</com.ourcompany.widget.CouponConstraintLayoutViewV2>

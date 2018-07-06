@@ -1,0 +1,119 @@
+import org.aspectj.bridge.IMessage
+import org.aspectj.bridge.MessageHandler
+
+apply plugin: 'com.android.application'
+//SMSSDK 添加插件
+apply plugin: "com.mob.sdk"
+
+buildscript {
+    repositories {
+        mavenCentral() }
+    dependencies {
+        classpath "org.aspectj:aspectjtools:$rootProject.ext.aspectjVersion"
+        classpath "org.aspectj:aspectjweaver:$rootProject.ext.aspectjVersion"
+    }
+}
+
+final def log = project.logger
+final def variants = project.android.applicationVariants
+variants.all {
+    variant -> if (!variant.buildType.isDebuggable()) {
+        log.debug("Skipping non-debuggable build type '${variant.buildType.name}'.")
+        return;
+    }
+        JavaCompile javaCompile = variant.javaCompile
+        javaCompile.doLast {
+            String[] args = ["-showWeaveInfo", "-1.8", "-inpath", javaCompile.destinationDir.toString(), "-aspectpath", javaCompile.classpath.asPath, "-d", javaCompile.destinationDir.toString(), "-classpath", javaCompile.classpath.asPath, "-bootclasspath", project.android.bootClasspath.join(File.pathSeparator)]
+            log.debug "ajc args: " +Arrays.toString(args)
+            MessageHandler handler = new MessageHandler(true);
+            new org.aspectj.tools.ajc.Main().run(args, handler); for (IMessage message : handler.getMessages(null, true)) {
+                switch (message.getKind()) {
+                    case IMessage.ABORT: case IMessage.ERROR: case IMessage.FAIL: log.error message.message, message.thrown
+                        break; case IMessage.WARNING: log.warn message.message, message.thrown
+                        break; case IMessage.INFO: log.info message.message, message.thrown
+                        break; case IMessage.DEBUG: log.debug message.message, message.thrown
+                        break;
+                }
+            }
+        }
+}
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "$rootProject.ext.buildToolVersion"
+    defaultConfig {
+        applicationId "com.ourcompany"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+       // multiDexEnabled false
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+        packagingOptions{
+            doNotStrip '*/mips/*.so'
+            doNotStrip '*/mips64/*.so'
+        }
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11 -frtti -fexceptions"
+                abiFilters 'armeabi-v7a'
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+}
+
+// 在MobSDK的扩展中注册SMSSDK的相关信息
+MobSDK {
+//    appKey "23f04acf8a9c4"
+//    appSecret "b9997fb5f7bf7dbab1bf75af2157a2c2"
+    appKey "24f4bb24e957e"
+    appSecret "c3231bbab128056dd04a007b16f72d5a"
+    SMSSDK {
+        gui false
+    }
+    UMSSDK {
+        gui false
+    }
+    MobIM {}
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //    compile "cn.bmob.android:http-legacy:$rootProject.ext.bmobHttpLegacyVersion"
+
+    compile "de.hdodenhof:circleimageview:$rootProject.ext.circleViewVersion"
+
+    // compile "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+    compile project(':libemoji')
+    compile project(':imagepicker')
+    // compile "com.jaeger.statusbarutil:library:$rootProject.ext.statusBarUtilVersion"
+    compile "com.xingliuhua:xlhratingbar_lib:$rootProject.ext.ratingBarVersion"
+    compile project(':citypicker')
+    compile project(':publicbundle')
+
+
+
+
+}

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiles">
+
+    <include layout="@layout/include_layout_toolbarlyout" />
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="0dp"
+        android:layout_height="0.6dp"
+        android:background="@color/colorBgV2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/common_toolbar" />
+
+    <ImageView
+        android:id="@+id/imageUser"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/common_16dp"
+        android:layout_marginRight="@dimen/common_16dp"
+        android:layout_marginTop="@dimen/common_8dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/photo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewLine" />
+
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:text="千里信息管理有限公司"
+        android:textColor="@color/colorFrist"
+        android:textSize="@dimen/font_14sp"
+        app:layout_constraintLeft_toRightOf="@+id/imageUser"
+        app:layout_constraintTop_toTopOf="@+id/imageUser" />
+
+
+    <com.example.xlhratingbar_lib.XLHRatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_marginLeft="@dimen/common_16dp"
+        android:layout_marginTop="@dimen/common_8dp"
+        app:canEdit="false"
+        app:countSelected="2"
+        app:differentSize="false"
+        app:dividerWidth="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/imageUser"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+        app:starCount="5"
+        app:stateResId="@drawable/ic_state_ratingbar"
+        app:widthAndHeight="14dp" />
+
+    <View
+        android:id="@+id/mDiviedView"
+        android:layout_width="0dp"
+        android:layout_height="0.6dp"
+        android:layout_marginTop="@dimen/common_8dp"
+        android:background="@color/colorBgV2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageUser" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_gravity="left"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mDiviedView"
+        android:layout_marginLeft="@dimen/common_8dp"
+        app:tabBackground="@android:color/transparent"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="0.6dp"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="@color/colorFrist" />
+    <View
+        android:id="@+id/mDiviedView2"
+        android:layout_width="0dp"
+        android:layout_height="0.6dp"
+        android:background="@color/colorBgV2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
+    <company.com.commons.swidget.NoScrollViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mDiviedView2" />
+
+
+</android.support.constraint.ConstraintLayout>

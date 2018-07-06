@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiles"
+    android:fitsSystemWindows="true">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBg"
+        android:layout_marginTop="48dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="?actionBarSize"
+           >
+            <View
+                android:id="@+id/emptyView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_8dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/whiles" />
+            <TextView
+                android:layout_below="@+id/emptyView"
+                android:id="@+id/tvPhone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/selector_text_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_16dp"
+                android:paddingRight="@dimen/common_16dp"
+                android:text="@string/str_my_phone"
+                android:textColor="@color/colorFrist"
+                android:textSize="@dimen/fragment_font_16sp" />
+
+            <TextView
+                android:layout_below="@+id/emptyView"
+                android:id="@+id/tvPhoneValue"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/common_16dp"
+                android:background="@null"
+                android:drawableRight="@drawable/ic_enter"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_16dp"
+                android:text="15510474794"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/btChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/tvPhone"
+                android:background="@drawable/selector_text_bg"
+                android:drawableRight="@drawable/ic_enter"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_16dp"
+                android:paddingRight="@dimen/common_16dp"
+                android:text="@string/str_change_password"
+                android:textColor="@color/colorFrist"
+                android:textSize="@dimen/fragment_font_16sp" />
+
+
+            <TextView
+                android:id="@+id/tvTipSocial"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@+id/btChangePassword"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_16dp"
+                android:paddingRight="@dimen/common_16dp"
+                android:text="@string/str_social_platform"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvWeChat"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/tvTipSocial"
+                android:background="@color/whiles"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_16dp"
+                android:text="@string/str_platform_wechat"
+                android:textColor="@color/colorFrist"
+                android:textSize="@dimen/fragment_font_16sp" />
+
+
+            <Switch
+                android:id="@+id/swith_wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvWeChat"
+                android:layout_alignBottom="@+id/tvWeChat"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/common_16dp"
+                android:switchMinWidth="18dp"
+                android:textOff="  "
+                android:textOn="  "
+                android:thumb="@drawable/swicth_thumb"
+                android:track="@drawable/swicth_track" />
+
+            <TextView
+                android:id="@+id/tvQQ"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/tvWeChat"
+                android:background="@color/whiles"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_16dp"
+                android:text="@string/str_platform_qq"
+                android:textColor="@color/colorFrist"
+                android:textSize="@dimen/fragment_font_16sp" />
+
+
+            <Switch
+                android:id="@+id/swith_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvQQ"
+                android:layout_alignBottom="@+id/tvQQ"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/common_16dp"
+                android:switchMinWidth="18dp"
+                android:textOff="  "
+                android:textOn="  "
+                android:thumb="@drawable/swicth_thumb"
+                android:track="@drawable/swicth_track" />
+
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/whiles"
+        android:padding="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIcon="@drawable/ic_back_v3"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/colorFrist" />
+
+
+</android.support.constraint.ConstraintLayout>

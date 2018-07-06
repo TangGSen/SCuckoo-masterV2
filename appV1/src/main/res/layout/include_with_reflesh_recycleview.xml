@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.ourcompany.widget.StateFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutState"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/common_8dp">
+
+    <include layout="@layout/layout_with_refresh_recycleview" />
+</com.ourcompany.widget.StateFrameLayout>
+

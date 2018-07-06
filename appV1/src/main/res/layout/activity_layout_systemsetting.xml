@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/whiles"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/include_layout_toolbarlyout" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/colorBg"
+        app:layout_constraintTop_toBottomOf="@+id/common_toolbar"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="?actionBarSize"
+            >
+
+
+            <TextView
+                android:layout_below="@+id/emptyView"
+                android:layout_marginTop="1dp"
+                android:id="@+id/btEditexInfo"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/selector_text_bg"
+                android:drawableRight="@drawable/ic_enter"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_16dp"
+                android:paddingRight="@dimen/common_16dp"
+                android:text="@string/str_ed_my_info"
+                android:textColor="@color/colorFrist"
+                android:textSize="@dimen/fragment_font_16sp" />
+
+            <TextView
+                android:id="@+id/btAccountSetting"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/btEditexInfo"
+                android:background="@drawable/selector_text_bg"
+                android:drawableRight="@drawable/ic_enter"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_16dp"
+                android:paddingRight="@dimen/common_16dp"
+                android:text="@string/str_account_setting"
+                android:textColor="@color/colorFrist"
+                android:textSize="@dimen/fragment_font_16sp" />
+
+
+            <TextView
+                android:id="@+id/btAccpetPush"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/btAccountSetting"
+                android:layout_marginTop="4dp"
+                android:background="@color/whiles"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_16dp"
+                android:text="@string/str_accpet_push"
+                android:textColor="@color/colorFrist"
+                android:textSize="@dimen/fragment_font_16sp" />
+
+            <Switch
+                android:id="@+id/swith_push"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/btAccpetPush"
+                android:layout_alignBottom="@+id/btAccpetPush"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/common_16dp"
+                android:switchMinWidth="18dp"
+                android:textOff="  "
+                android:textOn="  "
+                android:thumb="@drawable/swicth_thumb"
+                android:track="@drawable/swicth_track" />
+
+            <TextView
+                android:id="@+id/tvMsgVoice"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/btAccpetPush"
+                android:background="@color/whiles"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_16dp"
+                android:text="@string/str_msg_voice"
+                android:textColor="@color/colorFrist"
+                android:textSize="@dimen/fragment_font_16sp" />
+
+            <Switch
+                android:id="@+id/swith_msg_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvMsgVoice"
+                android:layout_alignBottom="@+id/tvMsgVoice"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/common_16dp"
+                android:switchMinWidth="18dp"
+                android:textOff="  "
+                android:textOn="  "
+                android:thumb="@drawable/swicth_thumb"
+                android:track="@drawable/swicth_track" />
+            <RelativeLayout
+                android:id="@+id/layoutVersion"
+                android:layout_width="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="@color/whiles"
+                android:layout_below="@+id/tvMsgVoice"
+                android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/btCheckNewVersion"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_16dp"
+                android:text="@string/str_check_new_version"
+                android:textColor="@color/colorFrist"
+                android:textSize="@dimen/fragment_font_16sp" />
+
+            <TextView
+                android:id="@+id/btCurrentVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/common_16dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/ic_enter"
+                android:paddingLeft="@dimen/common_16dp"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/btLogout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/layoutVersion"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/selector_text_bg"
+                android:gravity="center"
+                android:text="@string/str_exist_login"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fragment_font_16sp" />
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

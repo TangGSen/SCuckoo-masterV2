@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/frgment_login_2dp" />
+    <!--<solid android:color="@color/gradient_end_blud"/>-->
+ <gradient
+        android:endColor="@color/gradient_end_orange"
+      android:centerColor="@color/gradient_middle_orange"
+        android:startColor="@color/gradient_start_orange" />
+
+</shape>

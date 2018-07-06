@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/common_16dp"
+    android:layout_marginRight="@dimen/common_16dp"
+    android:paddingTop="@dimen/common_4dp"
+    android:paddingBottom="@dimen/common_4dp"
+    android:orientation="horizontal"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageUser"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/common_4dp"
+        android:layout_marginRight="@dimen/common_16dp"
+
+        android:layout_marginTop="@dimen/common_4dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/photo" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="userName"
+            android:textColor="@color/colorFrist"
+            android:textSize="@dimen/font_12sp" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_8dp"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="message"
+            android:textColor="@color/colorSecond"
+            android:textSize="@dimen/font_12sp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_8dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/common_8dp"
+        android:lines="1"
+        android:text="time"
+        android:textColor="@color/colorSecond"
+        android:textSize="@dimen/font_12sp" />
+
+</LinearLayout>

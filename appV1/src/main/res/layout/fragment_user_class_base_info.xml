@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_16dp"
+            android:text="@string/info_address"
+            android:textColor="@color/colorFrist"
+            android:textSize="@dimen/fragment_font_16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAddressV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/colorSecond"
+            android:textSize="@dimen/font_14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvAddress"
+            app:layout_constraintLeft_toRightOf="@id/tvAddress"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBusinessHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_16dp"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:text="@string/info_business_hours"
+            android:textColor="@color/colorFrist"
+            android:textSize="@dimen/fragment_font_16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddressV" />
+
+        <TextView
+            android:id="@+id/tvBusinessHoursV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:text="@string/info_business_hours"
+            android:textColor="@color/colorSecond"
+            android:textSize="@dimen/font_14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvBusinessHours"
+            app:layout_constraintLeft_toRightOf="@+id/tvBusinessHours"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tvServiceArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_16dp"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:text="@string/info_service_area"
+            android:textColor="@color/colorFrist"
+            android:textSize="@dimen/fragment_font_16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBusinessHoursV" />
+
+        <TextView
+            android:id="@+id/tvServiceAreaV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:text="@string/info_business_hours"
+            android:textColor="@color/colorSecond"
+            android:textSize="@dimen/font_14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvServiceArea"
+            app:layout_constraintLeft_toRightOf="@+id/tvServiceArea"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPriceRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_16dp"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:text="@string/info_price_range"
+            android:textColor="@color/colorFrist"
+            android:textSize="@dimen/fragment_font_16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvServiceAreaV" />
+
+        <TextView
+            android:id="@+id/tvPriceRangeV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:text="@string/info_price_range"
+            android:textColor="@color/colorSecond"
+            android:textSize="@dimen/font_14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvPriceRange"
+            app:layout_constraintLeft_toRightOf="@+id/tvPriceRange"
+            android:paddingBottom="48dp"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

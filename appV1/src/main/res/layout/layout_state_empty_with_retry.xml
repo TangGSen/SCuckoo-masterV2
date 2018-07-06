@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/image_id_empty_retry"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_null_data" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/str_null_and_retry"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/font_14sp" />
+
+        <TextView
+            android:id="@id/id_empty_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="@dimen/common_8dp"
+            android:paddingTop="@dimen/common_8dp"
+            android:paddingLeft="@dimen/common_16dp"
+            android:paddingRight="@dimen/common_16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/str_retry"
+            android:background="@drawable/bg_style_theme_stroke"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_14sp" />
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="@dimen/common_16dp"
+    android:layout_marginRight="@dimen/common_16dp">
+
+    <ImageView
+        android:id="@+id/imageMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_bg"
+        app:layout_constraintDimensionRatio="h,16:9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_gradient_brack"
+        app:layout_constraintBottom_toBottomOf="@+id/imageMain"
+        app:layout_constraintLeft_toLeftOf="@id/imageMain"
+        app:layout_constraintRight_toRightOf="@id/imageMain"
+         />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgUser"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="@dimen/common_8dp"
+        android:layout_marginLeft="@dimen/common_16dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/photo"
+        app:layout_constraintBottom_toBottomOf="@+id/imageMain"
+        app:layout_constraintLeft_toLeftOf="@+id/imageMain" />
+
+    <!--<android.support.constraint.Guideline-->
+    <!--android:id="@+id/guideline"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:orientation="horizontal"-->
+    <!--app:layout_constraintGuide_end="28dp"-->
+    <!--/>-->
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_marginLeft="@dimen/common_16dp"
+        android:text="名字dfjdijfiajdjfjadj"
+        android:textColor="@color/whiles"
+        android:textSize="14sp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:layout_marginRight="@dimen/common_16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgUser"
+        app:layout_constraintLeft_toRightOf="@+id/imgUser"
+        app:layout_constraintTop_toTopOf="@+id/imgUser"
+        app:layout_constraintRight_toLeftOf="@+id/tvImageList"
+        app:layout_goneMarginBottom="@dimen/common_16dp"
+         />
+    <TextView
+        android:id="@+id/tvImageList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/whiles"
+        android:layout_marginTop="@dimen/common_16dp"
+        android:layout_marginRight="@dimen/common_8dp"
+        android:drawableLeft="@drawable/ic_img_list"
+        android:drawablePadding="@dimen/common_8dp"
+        android:textSize="14sp"
+        app:layout_constraintRight_toRightOf="@+id/imageMain"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabel"
+        />
+
+</android.support.constraint.ConstraintLayout>

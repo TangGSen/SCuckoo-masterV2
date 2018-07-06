@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvUploadTip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/str_upload_id_tip"
+        android:textColor="@color/colorSecond"
+        android:textSize="@dimen/font_14sp"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <ImageView
+        android:id="@+id/fristImage"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/common_16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUploadTip"
+        app:layout_constraintRight_toRightOf="@+id/guideline"
+        android:layout_marginRight="@dimen/common_8dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:background="@color/colorBg"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:id="@+id/tvFristTip"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/common_16dp"
+        app:layout_constraintTop_toTopOf="@+id/fristImage"
+        app:layout_constraintBottom_toBottomOf="@+id/fristImage"
+        app:layout_constraintLeft_toLeftOf="@+id/fristImage"
+        app:layout_constraintRight_toRightOf="@+id/fristImage"
+        android:drawableTop="@drawable/ic_add_coupon"
+        android:drawablePadding="@dimen/common_8dp"
+        android:gravity="center"
+        android:textSize="@dimen/font_14sp"
+        android:textColor="@color/colorSecond"
+        android:text="@string/str_add_uplad_frist_pic"
+        android:layout_height="wrap_content" />
+
+
+
+    <ImageView
+        android:id="@+id/secondImage"
+        android:layout_width="0dp"
+        android:layout_marginLeft="@dimen/common_8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fristImage"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintDimensionRatio="1:1"
+        android:background="@color/colorBg"
+        android:layout_height="0dp"/>
+
+    <TextView
+        android:id="@+id/tvSecondTip"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/common_16dp"
+        app:layout_constraintTop_toTopOf="@+id/secondImage"
+        app:layout_constraintBottom_toBottomOf="@+id/secondImage"
+        app:layout_constraintLeft_toLeftOf="@+id/secondImage"
+        app:layout_constraintRight_toRightOf="@+id/secondImage"
+        android:gravity="center"
+        android:textSize="@dimen/font_14sp"
+        android:drawablePadding="@dimen/common_8dp"
+        android:textColor="@color/colorSecond"
+        android:drawableTop="@drawable/ic_add_coupon"
+        android:text="@string/str_add_uplad_second_pic"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btNext"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="@dimen/frgment_login_edtx_h40dp"
+        android:layout_marginTop="@dimen/frgment_login_24dp"
+        app:layout_constraintTop_toBottomOf="@+id/fristImage"
+        android:enabled="false"
+        android:background="@drawable/etbg_login_register"
+        android:text="@string/str_next_step_style1"
+        android:textColor="@drawable/selector_text_style_v2"
+        android:textSize="@dimen/font_14sp" />
+
+</android.support.constraint.ConstraintLayout>

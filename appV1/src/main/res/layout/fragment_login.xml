@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/frgment_login_24dp"
+    android:layout_marginRight="@dimen/frgment_login_24dp"
+    android:layout_marginTop="@dimen/frgment_login_layout_margin"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_while_editext"
+        android:hint="@string/frag_login_username_hint"
+        android:lineSpacingExtra="2dp"
+        android:lines="1"
+        android:drawableLeft="@drawable/ic_phone"
+        android:drawablePadding="@dimen/frgment_login_8dp"
+        android:paddingLeft="@dimen/frgment_login_24dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/text_gray"
+        android:textSize="16sp" />
+
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/frag_login_password_hint"
+        android:inputType="textPassword"
+        android:layout_marginTop="@dimen/frgment_login_24dp"
+        android:background="@drawable/bg_while_editext"
+        android:lines="1"
+        android:paddingLeft="@dimen/frgment_login_24dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/text_gray"
+        android:textSize="18sp" />
+
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/button_login_register"
+        android:enabled="false"
+        android:text="@string/loginString"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

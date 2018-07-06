@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiles"
+    android:fitsSystemWindows="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/common_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/whiles"
+            android:padding="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:navigationIcon="@drawable/ic_back_v3"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            app:titleTextColor="@color/colorFrist" />
+
+        <ImageView
+            android:id="@+id/iconLogo"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_below="@+id/common_toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="38dp"
+            android:src="@mipmap/about_cuckoo_logo" />
+
+        <TextView
+            android:id="@+id/tvVersionName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iconLogo"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:gravity="center_horizontal"
+            android:text="V 1.0.2"
+            android:textColor="@color/text_gray" />
+
+        <TextView
+            android:id="@+id/tvTermsOfService"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/tvVersionName"
+            android:layout_marginTop="@dimen/common_16dp"
+            android:background="@drawable/selector_text_bg"
+            android:drawableRight="@drawable/ic_enter"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_16dp"
+            android:paddingRight="@dimen/common_16dp"
+            android:text="@string/str_terms_of_service"
+            android:textColor="@color/colorFrist"
+            android:textSize="@dimen/fragment_font_16sp" />
+
+        <TextView
+            android:id="@+id/tvIntroduction"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/tvTermsOfService"
+            android:layout_marginTop="0.5dp"
+            android:background="@drawable/selector_text_bg"
+            android:drawableRight="@drawable/ic_enter"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_16dp"
+            android:paddingRight="@dimen/common_16dp"
+            android:text="@string/str_introduction"
+            android:textColor="@color/colorFrist"
+            android:textSize="@dimen/fragment_font_16sp" />
+
+
+        <TextView
+            android:id="@+id/tvCopyright"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/common_8dp"
+            android:layout_marginTop="100dp"
+            android:gravity="center_horizontal"
+            android:text="@string/str_copyright"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/font_12sp" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/whiles"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/include_layout_toolbarlyout" />
+
+    <com.ourcompany.widget.StateFrameLayout
+        android:id="@+id/layoutState"
+        android:layout_marginTop="?actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:loadingLayoutResId="@layout/layout_loading_cencter">
+
+        <include layout="@layout/layout_with_refresh_recycleview" />
+    </com.ourcompany.widget.StateFrameLayout>
+</android.support.constraint.ConstraintLayout>

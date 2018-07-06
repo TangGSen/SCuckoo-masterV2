@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/include_layout_toolbarlyout" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_item_post_images" />
+
+            <com.ourcompany.widget.DivideLineView
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                app:lineColor="@color/colorBg"
+                app:paintStrokeWidth="2dp"
+                app:shapeStart="36dp" />
+
+            <com.ourcompany.widget.StateFrameLayout
+                android:id="@+id/layoutState"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBg"
+                android:paddingBottom="200dp"
+                app:loadingLayoutResId="@layout/layout_loading_top">
+
+                <include layout="@layout/layout_with_refresh_recycleview" />
+            </com.ourcompany.widget.StateFrameLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:background="@color/whiles"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_16dp"
+        android:paddingRight="@dimen/common_8dp">
+
+
+        <TextView
+            android:id="@+id/etInputFor"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_write_comment"
+            android:drawableLeft="@drawable/ic_write"
+            android:focusable="false"
+            android:gravity="center_vertical|left"
+            android:hint="@string/hint_write_comment"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/common_8dp"
+            android:textColor="@color/colorFrist"
+            android:textSize="@dimen/font_14sp" />
+
+
+        <ImageView
+            android:id="@+id/imgLove"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="@dimen/common_8dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:src="@drawable/selector_ic_love" />
+
+    </LinearLayout>
+
+
+    <include layout="@layout/layout_pop_input_comment" />
+
+
+</FrameLayout>

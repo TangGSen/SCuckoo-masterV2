@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btClass1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_style_gray_v16"
+    android:button="@null"
+    android:gravity="center"
+    android:paddingBottom="@dimen/common_4dp"
+    android:paddingLeft="@dimen/common_8dp"
+    android:paddingRight="@dimen/common_8dp"
+    android:paddingTop="@dimen/common_4dp"
+    android:text="@string/str_class_personal"
+    android:textColor="@drawable/selector_text_style_check"
+    android:textSize="12sp" />
+

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiles"
+    android:fitsSystemWindows="true">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBg"
+        android:layout_marginTop="48dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="?actionBarSize"
+
+            >
+
+            <TextView
+                android:id="@+id/tvImage"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/selector_text_bg"
+                android:layout_marginTop="1dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_16dp"
+                android:paddingRight="@dimen/common_16dp"
+                android:text="@string/str_user_image"
+                android:textColor="@color/colorFrist"
+                android:textSize="@dimen/fragment_font_16sp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgUser"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_alignBottom="@+id/tvImage"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/common_8dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/photo" />
+
+            <TextView
+                android:id="@+id/tvNick"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/tvImage"
+                android:layout_marginTop="0.5dp"
+                android:background="@drawable/selector_text_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_16dp"
+                android:paddingRight="@dimen/common_16dp"
+                android:text="@string/str_nick_name"
+                android:textColor="@color/colorFrist"
+                android:textSize="@dimen/fragment_font_16sp" />
+
+
+            <EditText
+                android:id="@+id/ed_nickName"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignBaseline="@+id/tvNick"
+                android:layout_alignBottom="@+id/tvNick"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tvNick"
+                android:paddingRight="@dimen/common_16dp"
+                android:layout_marginTop="@dimen/common_8dp"
+                android:background="@null"
+                android:gravity="center_vertical|right"
+                android:paddingLeft="24dp"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/layoutIdentity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvNick"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/whiles">
+
+            <TextView
+                android:id="@+id/tvIdentity"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/selector_text_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_16dp"
+                android:paddingRight="@dimen/common_16dp"
+                android:text="@string/str_identity"
+                android:textColor="@color/colorFrist"
+                android:textSize="@dimen/fragment_font_16sp" />
+
+            <TextView
+                android:id="@+id/tvIdentityName"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/common_16dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_16dp"
+                android:text="sen"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/whiles"
+        android:padding="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIcon="@drawable/ic_back_v3"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/colorFrist">
+
+        <TextView
+            android:id="@+id/btSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@null"
+            android:paddingLeft="@dimen/common_16dp"
+            android:paddingRight="@dimen/common_16dp"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fragment_font_16sp" />
+    </android.support.v7.widget.Toolbar>
+
+</android.support.constraint.ConstraintLayout>

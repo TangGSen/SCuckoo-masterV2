@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/layout_ets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tipNewPhone"
+        android:layout_marginLeft="@dimen/frgment_login_24dp"
+        android:layout_marginRight="@dimen/frgment_login_24dp"
+        android:divider="@drawable/line_divider_h"
+        android:orientation="vertical"
+        android:showDividers="middle|end">
+
+        <EditText
+            android:id="@+id/etCurrentPhone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/frgment_login_edtx_h40dp"
+            android:layout_marginBottom="@dimen/common_8dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/ic_username"
+            android:drawablePadding="@dimen/common_4dp"
+            android:hint="@string/str_input_current_phone"
+            android:inputType="number"
+            android:lineSpacingExtra="2dp"
+            android:lines="1"
+            android:paddingLeft="16dp"
+            android:textColor="@color/colorFrist"
+            android:textColorHint="@color/text_gray"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etNewPhone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/frgment_login_edtx_h40dp"
+            android:layout_marginBottom="@dimen/common_8dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/ic_username"
+            android:drawablePadding="@dimen/common_4dp"
+            android:hint="@string/str_input_new_phone"
+            android:inputType="number"
+            android:lineSpacingExtra="2dp"
+            android:lines="1"
+            android:paddingLeft="16dp"
+            android:textColor="@color/colorFrist"
+            android:textColorHint="@color/text_gray"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btNext"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/frgment_login_edtx_h40dp"
+        android:layout_below="@+id/layout_ets"
+        android:layout_marginLeft="@dimen/frgment_login_24dp"
+        android:layout_marginRight="@dimen/frgment_login_24dp"
+        android:layout_marginTop="@dimen/frgment_login_24dp"
+        android:background="@drawable/etbg_login_register"
+        android:text="@string/str_next_step"
+        android:textColor="@drawable/selector_text_style_v2"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

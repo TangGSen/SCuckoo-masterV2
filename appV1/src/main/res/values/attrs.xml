@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="StateFrameLayout">
+        <attr name="loadingLayoutResId" format="reference" />
+        <attr name="emptyLayoutResId" format="reference" />
+        <attr name="netErrorLayoutResId" format="reference" />
+        <attr name="enableContentAnim" format="boolean" />
+    </declare-styleable>
+
+    <!--自定义特殊线条的分割线-->
+    <declare-styleable name="Division">
+        <attr name="lineColor" format="color" />
+        <attr name="shapeStart" format="dimension" />
+        <attr name="paintStrokeWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TextViewDrawable">
+        <attr name="drawableLeftWidth" format="dimension"/>
+        <attr name="drawableTopWidth" format="dimension"/>
+        <attr name="drawableRightWidth" format="dimension"/>
+        <attr name="drawableLeftHeight" format="dimension"/>
+        <attr name="drawableTopHeight" format="dimension"/>
+        <attr name="drawableRightHeight" format="dimension"/>
+        <attr name="drawableBottomHeight" format="dimension"/>
+        <attr name="drawableBottomWidth" format="dimension"/>
+        <attr name="isAliganCenter" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="CouponView">
+        <attr name="shape" format="enum">
+            <enum name="rect" value="1"/>
+            <enum name="circle" value="2"/>
+            <enum name="oval" value="3"/>
+        </attr>
+        <attr name="round_radius" format="dimension"/>
+        <attr name="typeRecfWidth" format="dimension"/>
+        <attr name="cicleRadiusWidth" format="dimension"/>
+        <attr name="bgColor" format="color"/>
+        <attr name="typeClassColor" format="color"/>
+        <attr name="cicleColor" format="color"/>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:stateListAnimator="@null"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_behavior="com.ourcompany.beahovr.FixAppBarBehavior">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+
+            <ImageView
+                android:id="@+id/bg_head"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/userinfo_bg_height"
+                android:background="@mipmap/ic_bg"
+                android:scaleType="centerCrop"
+                android:tag="overScroll"
+
+                />
+
+
+            <LinearLayout
+                android:id="@+id/middle_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/userinfo_bg_height"
+                android:background="@color/colorWhite"
+                android:layout_marginBottom="@dimen/common_8dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34dp"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/common_16dp"
+                    android:paddingRight="@dimen/common_16dp">
+
+                    <TextView
+                        android:id="@+id/tv_nickName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Lover's Day"
+                        android:textColor="@color/colorBlack33"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/btnChat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@drawable/selector_stroke_roundcir"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text="@string/chat"
+                        android:textColor="@color/whiles"
+                        android:textSize="@dimen/font_14sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/btnAddFriend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="16dp"
+                        android:background="@drawable/selector_stroke_roundredcir"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text="@string/addfriend"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/font_14sp"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/userSign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="2dp"
+                    android:maxLines="2"
+                    android:paddingLeft="16dp"
+                    android:text="-_-"
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <android.support.design.widget.TabLayout
+
+            android:background="@color/whiles"
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingLeft="@dimen/common_8dp"
+            android:layout_gravity="left"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="1dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabTextColor="@color/colorFrist" />
+    </android.support.design.widget.AppBarLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userImage"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginLeft="16dp"
+        android:src="@mipmap/photo"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="1dp"
+        app:layout_anchor="@+id/middle_layout"
+        app:layout_anchorGravity="top" />
+
+
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/mViewPager"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</android.support.design.widget.CoordinatorLayout>

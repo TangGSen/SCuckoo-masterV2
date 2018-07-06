@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/whiles">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:padding="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIcon="@drawable/ic_back_v3"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/colorWhite">
+
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/titleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_16dp"
+        android:layout_marginRight="@dimen/common_8dp"
+        android:paddingBottom="@dimen/common_16dp"
+        android:text="@string/str_coupon_name"
+        android:textColor="@color/colorFrist"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/common_toolbar" />
+
+    <TextView
+        android:id="@+id/checkOverdueCoupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/common_8dp"
+        android:gravity="center"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:text="@string/str_check_overdue_coupon"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintRight_toLeftOf="@+id/addCoupon"
+        android:textSize="@dimen/font_14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/titleName" />
+
+    <TextView
+        android:id="@+id/addCoupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:paddingLeft="@dimen/common_8dp"
+        android:paddingRight="@dimen/common_16dp"
+        android:drawableLeft="@drawable/ic_add_coupon"
+        android:text="@string/str_add_coupon"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="@dimen/font_14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/titleName" />
+
+
+
+
+
+    <company.com.commons.swidget.NoScrollViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorBg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleName" />
+
+
+</android.support.constraint.ConstraintLayout>

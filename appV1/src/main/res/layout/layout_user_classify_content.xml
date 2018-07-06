@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <TextView
+            android:id="@+id/btAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/common_8dp"
+            android:drawableLeft="@drawable/ic_address"
+            android:drawablePadding="-4dp"
+            android:gravity="center_vertical"
+            android:text="@string/str_address"
+            android:textColor="@color/colorFrist"
+            android:textSize="@dimen/font_14sp" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_16dp"
+            android:text="设计"
+            android:textColor="@color/colorFrist"
+            android:textSize="@dimen/fragment_font_16sp" />
+
+        <ImageView
+            android:id="@+id/btSerach"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_search" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorBgV2" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/btClassSerach"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:drawableLeft="@drawable/ic_class_serach"
+        android:drawablePadding="@dimen/common_4dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_8dp"
+        android:paddingRight="@dimen/common_8dp"
+        android:text="@string/str_choose_class"
+        android:textColor="@color/colorFrist"
+        android:textSize="@dimen/fragment_font_16sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBar" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_gravity="left"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btClassSerach"
+        app:layout_constraintTop_toBottomOf="@id/titleBar"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="scrollable"
+        app:tabBackground="@android:color/transparent"
+        app:tabGravity="fill"
+        />
+    <View
+        android:id="@+id/mPupoPositionView"
+        android:layout_width="0dp"
+        android:layout_height="0.6dp"
+        android:background="@color/colorBgV2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+        />
+
+    <com.ourcompany.widget.StateFrameLayout
+        android:id="@+id/layoutState"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mPupoPositionView"
+        app:loadingLayoutResId="@layout/layout_loading_top">
+
+        <include layout="@layout/layout_with_refresh_recycleview" />
+    </com.ourcompany.widget.StateFrameLayout>
+
+
+</android.support.constraint.ConstraintLayout>

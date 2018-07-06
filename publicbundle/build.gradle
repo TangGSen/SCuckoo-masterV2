@@ -1,0 +1,112 @@
+import org.aspectj.bridge.IMessage
+import org.aspectj.bridge.MessageHandler
+import com.android.build.gradle.LibraryPlugin
+import org.aspectj.tools.ajc.Main
+apply plugin: 'com.android.library'
+//
+buildscript {
+    repositories {
+        mavenCentral() }
+    dependencies {
+        classpath "org.aspectj:aspectjtools:$rootProject.ext.aspectjVersion"
+        classpath "org.aspectj:aspectjweaver:$rootProject.ext.aspectjVersion"
+    }
+}
+
+
+android.libraryVariants.all { variant ->
+    LibraryPlugin plugin = project.plugins.getPlugin(LibraryPlugin)
+    JavaCompile javaCompile = variant.javaCompile
+    javaCompile.doLast {
+        String[] args = ["-showWeaveInfo",
+                         "-1.8",
+                         "-inpath", javaCompile.destinationDir.toString(),
+                         "-aspectpath", javaCompile.classpath.asPath,
+                         "-d", javaCompile.destinationDir.toString(),
+                         "-classpath", javaCompile.classpath.asPath,
+                         "-bootclasspath",android.bootClasspath.join(File.pathSeparator)]
+
+        MessageHandler handler = new MessageHandler(true);
+        new Main().run(args, handler)
+
+        def log = project.logger
+        for (IMessage message : handler.getMessages(null, true)) {
+            switch (message.getKind()) {
+                case IMessage.ABORT:
+                case IMessage.ERROR:
+                case IMessage.FAIL:
+                    log.error message.message, message.thrown
+                    break;
+                case IMessage.WARNING:
+                case IMessage.INFO:
+                    log.info message.message, message.thrown
+                    break;
+                case IMessage.DEBUG:
+                    log.debug message.message, message.thrown
+                    break;
+            }
+        }
+    }
+}
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "$rootProject.ext.buildToolVersion"
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+        packagingOptions{
+            doNotStrip '*/mips/*.so'
+            doNotStrip '*/mips64/*.so'
+            exclude 'META-INF/rxjava.properties'
+        }
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11 -frtti -fexceptions"
+                abiFilters 'armeabi-v7a'
+            }
+        }
+
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    provided 'com.android.support:appcompat-v7:27.1.1'
+    testCompile 'junit:junit:4.12'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:3.0.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "org.aspectj:aspectjrt:$rootProject.ext.aspectjVersion"
+    //implementation "com.android.support:multidex:$rootProject.ext.multidexVersion"
+    compile project(':commons')
+    //    compile("cn.bmob.android:bmob-sdk:$rootProject.ext.bmobSdkVersion") {
+    //        exclude group: 'io.reactivex:rxandroid'
+    //        exclude group: 'io.reactivex:rxjava'
+    //    }
+    compile files('libs/BmobSDK_3.5.0_20160627.jar')
+    compile files('libs/gson-2.6.2.jar')
+    compile files('libs/okhttp-3.3.1.jar')
+    compile files('libs/okio-1.7.0.jar')
+
+    compile files('libs/rxandroid-1.2.0.jar')
+    compile files('libs/rxjava-1.1.6.jar')
+}

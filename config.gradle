@@ -1,0 +1,16 @@
+ext {
+
+    configuration = [
+            applicationId: 'me.stefan.easybehavior'
+    ]
+
+
+
+
+    sdkKey = [
+    ]
+
+    testingLibraries = [
+            "junit": 'junit:junit:4.12'
+    ]
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tabButtonItemName">
+        <item>首页</item>
+        <item>发现</item>
+        <item></item>
+        <item>材料城</item>
+        <item>我的</item>
+    </string-array>
+    <string-array name="tabMessageItems">
+        <item>会话</item>
+        <item>好友</item>
+        <item>测试</item>
+    </string-array>
+
+    <string-array name="tabFoundItems">
+        <item>最新</item>
+        <item>关注</item>
+        <item>热门</item>
+        <item>分类</item>
+    </string-array>
+    <string-array name="tabUserInfoItems">
+        <item>动态</item>
+        <item>关注</item>
+        <item>粉丝</item>
+    </string-array>
+
+
+    <!--帖子评论的投票的-->
+    <string-array name="tabPostDealtItems">
+        <item>评论</item>
+        <item>投票</item>
+    </string-array>
+
+    <string-array name="MainChooseItems">
+        <item>设计</item>
+        <item>施工</item>
+        <item>监理</item>
+        <item>维修</item>
+        <item>学习</item>
+    </string-array>
+
+    <string-array name="tabUserClassInfoItems">
+        <item>综合</item>
+        <item>成交量</item>
+        <item>位置距离</item>
+    </string-array>
+<!--Team case detail-->
+    <string-array name="tabUserTeamCaseDetailItems">
+        <item>主页</item>
+        <item>客服</item>
+        <item>收藏</item>
+    </string-array>
+
+    <string-array name="tabCouponItems">
+        <item>发行中</item>
+        <item>已过期</item>
+    </string-array>
+
+    <string-array name="tabUserClassifyDetailItems">
+        <item>基础信息</item>
+        <item>团队</item>
+        <item>作品</item>
+        <item>评价</item>
+    </string-array>
+
+    <string-array name="tabMineManager">
+        <item>我的团队</item>
+        <item>我的作品</item>
+        <item>我的卡券</item>
+    </string-array>
+
+    <string-array name="tabAddCouponType">
+        <item>新建</item>
+        <item>历史导入</item>
+        <item>查看模板</item>
+    </string-array>
+
+    <string-array name="tabSortItems">
+        <item>综合排序</item>
+        <item>评论从高到低</item>
+    </string-array>
+
+    <string-array name="tabClassUserItems">
+        <item>全部</item>
+        <item>个人</item>
+        <item>公司</item>
+    </string-array>
+
+
+    <declare-styleable name="PieView">
+        <attr name="percentage" format="float" />
+        <attr name="percentage_size" format="integer" />
+        <attr name="inner_pie_padding" format="integer" />
+        <attr name="inner_text_visibility" format="boolean" />
+        <attr name="inner_text" format="string" />
+    </declare-styleable>
+</resources>
